@@ -1,0 +1,29 @@
+h1 {
+    background-color: dimgrey;
+    color: black;
+    width: fit-content;
+}
+
+.p1 {
+    background-color: aliceblue;
+    color: blueviolet;
+    font: inherit;
+}
+
+h2 {
+    background-color: blanchedalmond;
+    color: aqua;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.h2pink {
+    background-color: blanchedalmond;
+    color: pink;
+    font: 300;
+}
+
+.p2 {
+    background-color: blueviolet;
+    color: black;
+    font-size: medium;
+}
