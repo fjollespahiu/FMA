@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    position: relative;
+    left: 50px;
+    border: none;
+    width: 350px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: left;
+}
+
+.box div:first-child {
+    position: absolute;
+    top: -20px;
+}
+
+.Neil1 {top: 50px;}
+.buzz {top: 100px;}
+.Neil2 {top: 150px;}
+.Neil3 {top: 200px;}
+.Neil4 {top: 250px; margin-bottom: 300px;}
+
+.x {
+    cursor: pointer;
+    background-color: red;
+    border-radius: 80px;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.earth {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: fit-content;
+    text-align: center;
+}
+
+.earth video {
+    width: 400px;
+    height: 200px;
+}
