@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    width: 300px;
+    margin: 20px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+
+.card-info div:first-child {
+    font-size: 40pt;
+    align-items: center;
+    padding: 0%;
+}
+
+.card-info div:last-child ul{
+    list-style-type: none;
+    font-size: larger;
+    text-align: center;
+    border-left: 3px solid black;
+}
+
+.card-copyright {
+    width: fit-content;
+    height: 500px;
+    background-image: url("images/deadpool.jpg");
+    background-size: cover;
+}
+
+.card-copyright p {
+    width: 250px;
+    color: white;
+    font-size: 12pt;
+}

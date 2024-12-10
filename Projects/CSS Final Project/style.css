@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 320px auto;
+}
+aside {
+    padding: 20px;
+    height: 100vh;
+    background: url(images/sidebar-1.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0,0.3);
+    position: sticky;
+    top: 0;
+}
+
+main {
+    overflow-y: scroll;
+}
+header {
+    height: 200px;
+}
+.content {
+    background-color: aqua;
+    height: 1000px;
+}
