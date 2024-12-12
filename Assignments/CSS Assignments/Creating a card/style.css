@@ -2,45 +2,58 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.cards {display: flex;}
 
 .card {
     display: flex;
     flex-direction: column;
-    border: 3px solid black;
-    width: 300px;
+    width: fit-content;
+    border: 5px solid black;
     margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .card-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 3px solid black;
+    justify-content: space-evenly;
+    height: 100px;
 }
 
-.card-info div:first-child {
+.card-price {
     font-size: 40pt;
-    align-items: center;
-    padding: 0%;
+    font-weight: bold;
+    padding: 15px;
 }
 
-.card-info div:last-child ul{
-    list-style-type: none;
-    font-size: larger;
-    text-align: center;
+.card-date {
     border-left: 3px solid black;
+    width: 110px;
 }
 
-.card-copyright {
-    width: fit-content;
-    height: 500px;
+.card-date ul {
+    list-style-type: none;
+    font-size: 14pt;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.dt {font-size: 35pt; font-weight: bold;}
+
+.card-bg {
+    height: 400px;
     background-image: url("images/deadpool.jpg");
     background-size: cover;
+    border-top: 5px solid black;
 }
 
-.card-copyright p {
-    width: 250px;
+.card-bg p {
     color: white;
-    font-size: 12pt;
-}
+    font-size: 11pt;
+    font-weight: bold;
+    width: 120px;
+    margin-left: 5px;}

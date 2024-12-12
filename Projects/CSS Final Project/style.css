@@ -1,30 +1,71 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body {
-    margin: 0;
-    padding: 0;
+    font-family: sans-serif;
     display: grid;
-    grid-template-columns: 320px auto;
+    grid-template-columns: auto 1fr;
+}
+.circleBTN {
+    display: none;
 }
 aside {
-    padding: 20px;
+    width: 300px;
+    background-color: aquamarine;
     height: 100vh;
-    background: url(images/sidebar-1.jpg);
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0,0.3);
-    position: sticky;
-    top: 0;
+    padding: 20px;
+    position: fixed;
 }
 
 main {
+    padding: 20px;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     overflow-y: scroll;
+    width: 80vw;
 }
-header {
-    height: 200px;
+
+.allsection {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-.content {
-    background-color: aqua;
-    height: 1000px;
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stats > div{
+    padding: 20px;
+    background-color: beige;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1024px){
+    aside {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+        width: 100vw;
+    }
+    .circleBTN {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 320px){
+
+
 }
