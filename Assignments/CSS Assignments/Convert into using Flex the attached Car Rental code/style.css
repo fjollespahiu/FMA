@@ -9,12 +9,13 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
     background-color: rgb(255, 246, 234);
+    padding-right: 20px;
 }
 
-.logo { float: right; margin-right: 20px;  }
+
 .logo img { width: 60px; }
 
 .wrapper {
@@ -22,13 +23,14 @@ nav {
     margin: 0 auto;
 }
 
+nav ul {display: flex;}
+
 nav li {
     background-color: antiquewhite;
     list-style-type: none;
     border: 1px solid rgb(201, 201, 201);
     margin: 10px;
     width: fit-content;
-    float: left;
 }
 
 nav li a {
@@ -43,7 +45,7 @@ nav li a:hover {
 }
 
 header {
-    background: url(./img/header.png);
+    background: url(assets/img/header.png);
     background-size: cover;
     color: white;
     padding: 150px 0;
@@ -91,7 +93,25 @@ input, select {
     font-size: 18px;
 }
 
-.featured-1 {
+.featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.featured img {max-width: 400px;}
+
+.featured-dsp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+button {width: fit-content;}
+
+.featured-2 {
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -99,29 +119,4 @@ input, select {
     padding: 50px 0px;
 }
 
-.featured-1 img { 
-    max-width: 400px;
-    float: left;
-    margin-right: 20px;
-}
-
-.featured-1 h2, .featured-1 p, .featured-1 button {
-    margin-bottom: 20px;
-}
-
- .featured-2 {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
-    padding: 50px 0px;
-}
-
-.featured-2 img { 
-    max-width: 400px;
-    float: right;
- }
-
- .featured-2 h2, .featured-2 p, .featured-2 button {
-    margin-bottom: 20px;
-}
+.featured-2 img {max-width: 400px;}

@@ -16,7 +16,7 @@ body {
 .center {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 100px;
+    column-gap: 12%;
     background-color: beige;
     width: 100vw;
 }
