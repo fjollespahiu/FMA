@@ -1,30 +1,230 @@
 * {
-    box-sizing: border-box;
-}
-body {
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: 320px auto;
-}
-aside {
-    padding: 20px;
-    height: 100vh;
-    background: url(images/sidebar-1.jpg);
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0,0.3);
-    position: sticky;
-    top: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: rgb(233, 233, 233);
+    margin: 0;
+}
+
+/*Buttons*/
+.circle {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.circle:hover {
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 3px 20px;
+}
+
+.pop-up {
+    visibility: hidden;
+    width: fit-content;
+    padding: 5px;
+    font-size: 8pt;
+    background-color: rgb(71, 71, 71);
+    color: white;
+    position: absolute;
+    top: 55px;
+    right: 120px;
+    z-index: 80;
+}
+
+.circle:hover .pop-up {
+    visibility: visible;
+}
+
+/*End Buttons*/
+
+.dots {width: 25px; opacity: 0.7;}
+
+.magnifier {width: 80px;}
+
+aside {
+    width: 18.5%;
+    height: 100vh;
+    padding: 1%;
+    position: fixed;
+    background: url('images/sidebar-1.jpg');
+    background-size: cover;
+    background-position: left;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+
+hr {opacity: 0.5;}
+
+.cool-page {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4%;
+    gap: 20%;
+    font-size: 10pt;
+}
+
+.profile {
+    color: white;
+    display: grid;
+    grid-template-columns: 10% auto auto;
+    gap: 18%;
+    padding: 5%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10pt;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: url('images/avatar.jpg');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+aside ul {
+    list-style-type: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 8% 0 8% 0;
+    margin-top: 0;
+    font-size: 10pt;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7.5% 6% 7.5% 6%;
+    border-radius: 5px;
+}
+
+.list-options {
+    display: flex;
+    gap: 45%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15%;
+    padding: 6%;
+    border-radius: 5px;
+    background-color: rgb(255, 60, 0);
+}
+
+.map-img {width: 28%;}
+.table-img {width: 28%; }
+
 main {
+    padding: 20px;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     overflow-y: scroll;
+    width: 80vw;
 }
+
+.header-left { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20%;
+}
+
 header {
-    height: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
 }
-.content {
-    background-color: aqua;
-    height: 1000px;
+
+.header-right > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5%;
+    align-items: center;
 }
+
+.header-right ul :nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.header-right img {
+    width: 50%;
+    opacity: 0.6;
+}
+
+.header-right input {
+    border: none;
+    border-bottom: 2px solid rgb(164, 164, 164);
+    background: transparent;
+    padding: 3%;
+    transition: 0.5s;
+}
+
+.header-right input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(146, 6, 143);
+}
+
+h4 {font-weight: lighter;}
+
+.allsection {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stats>div {
+    padding: 20px;
+    background-color: beige;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100vw;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 320px) {}

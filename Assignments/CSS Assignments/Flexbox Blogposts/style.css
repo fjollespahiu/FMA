@@ -57,6 +57,7 @@ hr {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    position: relative;
 }
 
 
@@ -68,18 +69,7 @@ hr {
     color: red;
 }
 
-.iron-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    top: 20px;
-    right: 20px;
-}
-
-.spider-image {
+.image {
     width: 80px;
     height: 80px;
     border-radius: 50%;

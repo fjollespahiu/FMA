@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+.top-pink {
+    background-color: palevioletred;
+    grid-column: span 4;
+}
+
+.center {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 100px;
+    background-color: beige;
+    width: 100vw;
+}
+
+.green {
+    background-color: palegreen;
+}
+
+.bottom-pink {
+    grid-column: span 4;
+    background-color: palevioletred;
+}

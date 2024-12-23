@@ -55,6 +55,7 @@ body {
     display: none;
 }
 
+
 .header-left div:first-child img {
     width: 20px;
 }
@@ -109,7 +110,6 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    grid-area: 10px;
     gap: 10px;
 }
 

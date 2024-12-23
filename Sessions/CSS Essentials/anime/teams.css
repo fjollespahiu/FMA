@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+}
+
+.card {
+    padding: 30px;
+    border: 2px solid rgb(218, 218, 218);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(90, 90, 90);
+    transition: 0.5s;
+}
+
+.card ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none
+}
+
+.card ul i:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    /*transform: rotate3d(1, 1, 1, 25deg);*/
+}
+
+.card-op:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    transform: rotate3d(1, 1, 1, -25deg);
+}
+
+.thumb {
+    animation-name: teamphoto;
+    animation-duration: 2s;}
+
+@keyframes teamphoto {
+    from {
+        border-radius: 0%;
+    }
+
+    to {
+        border-radius: 80%;
+    }
+}
