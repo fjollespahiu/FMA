@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {background-color: rgb(189, 184, 184);}
+
+.container {
+    width: 40%;
+    padding: 60px;
+}
+
+p {visibility: hidden;}
+
+input {padding: 10px; width: 400px;}
+
+.onediv {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    background-color: rgb(114, 114, 207);
+    color: white;
+    padding: 10px;
+}
+
+img {
+    animation-name: spinner;
+    width: 40px;
+    transform: repeat all rotate(180deg);
+}
+
+input:focus {
+    border: blue;
+}
+
+@keyframes spinner {
+    from {visibility: hidden;}
+
+    to {
+        visibility: visible;
+        transition-behavior: ease-in;
+    }
+}
