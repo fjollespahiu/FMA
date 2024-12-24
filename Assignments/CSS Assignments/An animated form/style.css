@@ -4,42 +4,76 @@
     box-sizing: border-box;
 }
 
-body {background-color: rgb(189, 184, 184);}
+body {
+    background-color: rgb(189, 184, 184);
+}
 
 .container {
     width: 40%;
     padding: 60px;
 }
 
-p {visibility: hidden;}
+p {
+    color: rgb(70, 70, 70);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-input {padding: 10px; width: 400px;}
+input {
+    padding: 10px;
+    width: 400px;
+    border: 0.5px solid gray;
+}
+
+input:focus {
+    border: 0.5px solid blue;
+    outline: 1px solid blue;
+  }
 
 .onediv {
     display: flex;
     justify-content: space-between;
 }
+
 button {
-    background-color: rgb(114, 114, 207);
+    background-color: rgb(53, 53, 255);
     color: white;
     padding: 10px;
+    border: 1px solid gray;
+    cursor: pointer;
 }
 
 img {
     animation-name: spinner;
-    width: 40px;
-    transform: repeat all rotate(180deg);
+    width: 35px;
 }
 
-input:focus {
-    border: blue;
+.spinner {
+    animation: spinner 1s linear infinite;
 }
+
+  
+input:focus + p {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 @keyframes spinner {
-    from {visibility: hidden;}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
+@keyframes paragraph {
+    from {
+       transition: none;
+    }
     to {
         visibility: visible;
-        transition-behavior: ease-in;
+        transition-timing-function: ease-in;
     }
 }
