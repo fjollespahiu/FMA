@@ -28,7 +28,9 @@ aside {
     text-align: right;
 }
 
-aside img { width: 10rem;}
+aside img {
+    width: 10rem;
+}
 
 main {
     grid-column: 2 / 3;
@@ -40,15 +42,24 @@ main {
     margin: 5% 5% 0 5%;
 }
 
-.blog1 {grid-row: 1 / 2;}
-.blog2 {grid-row: 2 / 3; margin-top: 5%;}
+.blog1 {
+    grid-row: 1 / 2;
+}
+
+.blog2 {
+    grid-row: 2 / 3;
+    margin-top: 5%;
+}
 
 .post {
     color: red;
     text-transform: uppercase;
 }
 
-hr {border-color: red; margin-top: 1%;}
+hr {
+    border-color: red;
+    margin-top: 1%;
+}
 
 .blog-post {
     display: flex;
@@ -57,11 +68,18 @@ hr {border-color: red; margin-top: 1%;}
     margin-top: 2%;
 }
 
-.writing p {font-size: 1rem;}
-.author {color: red;}
+.writing p {
+    font-size: 1rem;
+}
+
+.author {
+    color: red;
+}
 
 .image {
-    max-width:fit-content;
+    width: 5rem;
+    height: 5rem;
+    min-width: 80px;
     border-radius: 80%;
     background-size: cover;
     background-position: center;
@@ -107,6 +125,4 @@ hr {border-color: red; margin-top: 1%;}
         grid-row: 2 / 3;
         grid-column: 1 / 2;
     }
-    
 }
-    
