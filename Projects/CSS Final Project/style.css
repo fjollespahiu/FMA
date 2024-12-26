@@ -206,7 +206,7 @@ header {
 
 h4 {font-weight: lighter;}
 
-.allsections {
+.sections {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -268,16 +268,19 @@ iframe {padding-top: 0.6%; width: 71%; height: 105%;}
     gap: 2em;
 }
 
-.stats div {
-    padding: 3%;
+.box {
+    position: relative;
+    padding: 2.5%;
     background-color: white;
     border-radius: 5px;
+    align-items: center;
 }
+
 
 .stat-icon {
     background-color: orange;
     width: fit-content;
-    padding: 1.8%;
+    padding: 4%;
     border-radius: 5px;
     position: absolute;
     top: -20px;
@@ -285,21 +288,13 @@ iframe {padding-top: 0.6%; width: 71%; height: 105%;}
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.box {position: relative;}
 
-.box img {opacity: 0.5;}
-
-.booking {
-   position: relative;
-   top: -30px;
-   right: 100px;
-}
 .sofa {background-color: orange;}
 
-.revenue {
-    position: relative;
+.description {
+    text-align: right;
+    line-height: 2.2rem;
 }
-
 
 @media only screen and (max-width: 1024px) {
     aside {
