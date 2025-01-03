@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <body>
-    <aside>
+    <aside class="aside">
         <div class="cool-page">
             <div>CP</div>
             <div>COOL PAGE</div>
@@ -18,104 +23,119 @@
         <div class="profile">
             <div class="avatar"></div>
             <div>John Doe</div>
-            <img src="images/aside/expandMore.svg" alt="">
+            <span class="material-icons">keyboard_arrow_down</span>
         </div>
         <hr>
-        <ul>
+        <ul class="cursor">
             <li class="dashboard">
-                <div><img src="images/aside/asideDashboard.svg" alt=""></div>
+                <span class="material-icons">dashboard</span>
                 <div>Dashboard</div>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/pages.svg" alt="">
+                    <span class="material-icons">image</span>
                     <div>Pages</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/components.svg" alt="">
+                    <span class="material-icons">apps</span>
                     <div>Components</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/form.svg" alt="">
+                    <span class="material-icons">content_paste</span>
                     <div>Forms</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/table.svg" alt="">
+                    <span class="material-icons">grid_on</span>
                     <div>Table</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/map.svg" alt="">
+                    <span class="material-icons">location_on</span>
                     <div>Maps</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/widget.svg" alt="">
+                    <span class="material-icons">widgets</span>
                     <div>Widgets</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/chart.svg" alt="">
+                    <span class="material-icons">timeline</span>
                     <div>Charts</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
             <li class="list">
                 <div class="list-options">
-                    <img src="images/aside/calendar.svg" alt="">
+                    <span class="material-icons">date_range</span>
                     <div>Calendar</div>
                 </div>
-                <div><img src="images/aside/expandMore.svg" alt=""></div>
+                <span class="material-icons">keyboard_arrow_down</span>
             </li>
         </ul>
     </aside>
     <main>
         <header>
             <div class="header-left">
-                <div class="btnCircle"><img class="dots" src="images/dots.png" alt=""></div>
-                <h4>Dashboard</h4>
+                <div class="btnCircle cursor hidden">
+                    <span class="material-icons" title="See more">more_vert</span>
+                </div>
+                <h3 class="headings">Dashboard</h3>
             </div>
-            <div class="header-right">
+            <div class="menu">
+                <span class="material-icons" title="Menu">menu</span>
+            </div>
+            <div class="header-right hidden">
                 <ul>
-                    <li>
+                    <li class="search-li">
                         <div><input type="search" placeholder="Search"></div>
-                        <div class="btnCircle">
-                            <img class="magnifier" src="images/magnifier.png" alt="">
-                            <div class="pop-up">Search</div>
+                        <div class="btnCircle cursor">
+                            <span class="material-icons" title="Search">search</span>
                         </div>
                     </li>
                     <li>
-                        <img src="images/dashboard.png" alt="">
-                        <div class="pop-up">Dashboard</div>
+                        <span class="material-icons cursor" title="Dashboard">dashboard</span>
                     </li>
-                    <li class="bell">
+                    <li class="bell cursor">
                         <span class="notify-no">5</span>
-                        <img src="images/bell.png" alt="">
+                        <div class="notification">
+                            <span class="material-icons" title="Notifications">notifications</span>
+                            <div class="notification-list">
+                                <ul>
+                                    <li>John Doe sent a message</li>
+                                    <li>Someone viewed your profile</li>
+                                    <li>John Doe sent a message</li>
+                                    <li>Someone viewed your profile</li>
+                                    <li>Another notification</li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
-                    <li><img src="images/profile.png" alt=""></li>
+                    <li>
+                        <span class="material-icons cursor" title="Profile">person</span>
+                    </li>
                 </ul>
-                <div class="dashes"><img src="images/dashes.png" alt=""></div>
             </div>
         </header>
         <div class="sections">
             <section class="locations">
                 <div class="icon">
-                    <img src="images/globe.svg" alt="">
+                    <span class="material-icons white">language</span>
                 </div>
                 <h1>Global Sales by Top Locations</h1>
                 <div class="locations-content">
@@ -154,59 +174,150 @@
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1735145814944!5m2!1sen!2s"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </section>
             <section class="stats">
                 <div class="box">
-                    <div class="stat-icon">
-                        <img src="images/sofa.svg" alt="">
+                    <div class="stat-icon sofa">
+                        <span class="material-icons white">weekend</span>
                     </div>
                     <div class="description">
-                        <p>Bookings</p>
-                        <h2>184</h2>
+                        <div>
+                            <span>Bookings</span>
+                            <h2 class="headings">184</h2>
+                        </div>
                     </div>
                     <hr>
-                    <img src="images/triangle.svg" alt=""> Get more space
+                    <div class="bottom-text">
+                        <img src="images/triangle.svg" alt=""> Get more space
+                    </div>
                 </div>
                 <div class="box">
-                    <div class="stat-icon">
-                        <img src="" alt="">
+                    <div class="stat-icon bars">
+                        <span class="material-icons white">equalizer</span>
                     </div>
                     <div class="description">
-                        <p>Bookings</p>
-                        <h2>184</h2>
+                        <div>
+                            <p>Website Visits</p>
+                            <h2 class="headings">75.521</h2>
+                        </div>
                     </div>
                     <hr>
-                    <img src="images/tag.svg" alt=""> Tracked from Google Analytics
+                    <div class="bottom-text">
+                        <img src="images/tag.svg" alt=""> Tracked from Google Analytics
+                    </div>
                 </div>
                 <div class="box">
-                    <div class="stat-icon">
-                        <img src="images/store.svg" alt="">
+                    <div class="stat-icon store">
+                        <span class="material-icons white">store</span>
                     </div>
                     <div class="description">
-                        <p>Bookings</p>
-                        <h2>184</h2>
+                        <div>
+                            <p>Revenue</p>
+                            <h2 class="headings">$34,245</h2>
+                        </div>
                     </div>
                     <hr>
-                    <img src="images/24hours.svg" alt=""> Last 24 hours
+                    <div class="bottom-text">
+                        <img src="images/24hours.svg" alt="">
+                        <p>Last 24 hours</p>
+                    </div>
                 </div>
                 <div class="box">
-                    <div class="stat-icon">
-                        <img src="" alt="">
+                    <div class="stat-icon earth">
+                        <span class="material-icons white">public</span>
                     </div>
                     <div class="description">
-                        <p>Bookings</p>
-                        <h2>184</h2>
+                        <div>
+                            <p>Followers</p>
+                            <h2 class="headings">+245</h2>
+                        </div>
                     </div>
                     <hr>
-                    <img src="" alt=""> Just updated
+                    <div class="bottom-text">
+                        <img src="images/update.svg" alt="">
+                        <p>Just updated</p>
+                    </div>
                 </div>
             </section>
-            <section>Listing</section>
-        </div>
-
-        <footer>Something</footer>
+            <h2 class="headings">Manage Listings</h2>
+            <section class="cards">
+                <div class="card">
+                    <div class="card-top">
+                        <img class="card-img" src="images/card-1.jpeg" alt="">
+                        <div class="btns">
+                            <span title="View" class="material-icons gray cursor">art_track</span>
+                            <span title="Edit" class="material-icons green cursor">edit</span>
+                            <span title="Delete" class="material-icons red cursor">close</span>
+                        </div>
+                    </div>
+                    <h3>Cozy 5 Star Apartment</h3>
+                    <div class="card-mid">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti omnis voluptates nam
+                            exercitationem similique neque dignissimos sint.</p>
+                    </div>
+                    <div class="card-bottom">
+                        <hr>
+                        <div>
+                            <p>$899/night</p>
+                            <span class="size"><img src="images/map.svg" alt="">Barcelona, Spain</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top">
+                        <img class="card-img" src="images/card-2.jpeg" alt="">
+                        <div class="btns">
+                            <span title="View" class="material-icons gray cursor">art_track</span>
+                            <span title="Edit" class="material-icons green cursor">edit</span>
+                            <span title="Delete" class="material-icons red cursor">close</span>
+                        </div>
+                    </div>
+                    <h3>Office Studio</h3>
+                    <div class="card-mid">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti omnis voluptates nam
+                            exercitationem similique neque dignissimos sint.</p>
+                    </div>
+                    <div class="card-bottom">
+                        <hr>
+                        <div>
+                            <p>$1.999/night</p>
+                            <span class="size"><img src="images/map.svg" alt="">London, UK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top">
+                        <img class="card-img" src="images/card-3.jpeg" alt="">
+                        <div class="btns">
+                            <span title="View" class="material-icons gray cursor">art_track</span>
+                            <span title="Edit" class="material-icons green cursor">edit</span>
+                            <span title="Delete" class="material-icons red cursor">close</span>
+                        </div>
+                    </div>
+                    <h3>Beautiful Castle</h3>
+                    <div class="card-mid">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti omnis voluptates nam
+                            exercitationem similique neque dignissimos sint.</p>
+                    </div>
+                    <div class="card-bottom">
+                        <hr>
+                        <div>
+                            <p>$459/night</p>
+                            <span class="size"><img src="images/map.svg" alt="">Milan, Italy</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <footer>
+                <div class="footer-left cursor">Home Company Portfolio Blog</div>
+                <div class="footer-right">
+                    &#xA9; John Doe, 2023
+                </div>
+            </footer>
     </main>
 </body>
 
