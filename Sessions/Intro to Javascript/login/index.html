@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-wrap">
+        <h2>Login</h2>
+
+        <div class="form">
+            <input type="text" id="username" placeholder="Username" name="un" />
+            <input type="password" id="password" placeholder="Password" name="pw" />
+            <button onclick="checkLogin()"> Sign in </button>
+            <p class="msg"></p>
+            <a href="#">
+                <p> Don't have an account? Register </p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const username = document.querySelector('#username');
+        const password = document.querySelector('#password');
+        const msg      = document.querySelector(".msg");
+
+        let data = {username: "fma" , password: "#Fma#2025"}
+
+        function checkLogin() {
+            if (username.value == data.username && password.value == data.password) {
+                console.log("SUCCESS");
+                msg.textContent = "SUCCESS";
+                msg.style.color = "green";
+            }
+            else {
+                console.log("Wrong Credentials");
+                msg.textContent = "Wrong Credentials";
+                msg.style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>
