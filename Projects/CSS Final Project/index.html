@@ -93,23 +93,21 @@
         <header>
             <div class="header-left">
                 <div class="btnCircle cursor hidden">
-                    <span class="material-icons" title="See more">more_vert</span>
+                    <span class="material-icons md-21" title="See more">more_vert</span>
                 </div>
                 <h3 class="headings">Dashboard</h3>
             </div>
-            <div class="menu">
-                <span class="material-icons" title="Menu">menu</span>
-            </div>
+
             <div class="header-right hidden">
                 <ul>
                     <li class="search-li">
                         <div><input type="search" placeholder="Search"></div>
                         <div class="btnCircle cursor">
-                            <span class="material-icons" title="Search">search</span>
+                            <span class="material-icons md-21" title="Search">search</span>
                         </div>
                     </li>
                     <li>
-                        <span class="material-icons cursor" title="Dashboard">dashboard</span>
+                        <span class="material-icons md-21 cursor" title="Dashboard">dashboard</span>
                     </li>
                     <li class="bell cursor">
                         <span class="notify-no">5</span>
@@ -127,55 +125,63 @@
                         </div>
                     </li>
                     <li>
-                        <span class="material-icons cursor" title="Profile">person</span>
+                        <span class="material-icons md-21 cursor" title="Profile">person</span>
                     </li>
                 </ul>
             </div>
+            <span class="menu">
+                <span class="material-icons" title="Menu">menu</span>
+            </span>
         </header>
         <div class="sections">
             <section class="locations">
-                <div class="icon">
-                    <span class="material-icons white">language</span>
+                <div class="locations-top">
+                    <div class="icon">
+                        <span class="material-icons md-21 white">language</span>
+                    </div>
+                    <h1>Global Sales by Top Locations</h1>
                 </div>
-                <h1>Global Sales by Top Locations</h1>
                 <div class="locations-content">
-                    <table>
-                        <tr>
-                            <td>&#58636;USA</td>
-                            <td>2.920</td>
-                            <td>53.23%</td>
-                        </tr>
-                        <tr>
-                            <td>&#xe50e;Germany</td>
-                            <td>1.300</td>
-                            <td>4.34%</td>
-                        </tr>
-                        <tr>
-                            <td>&#x1f1e6;Australia</td>
-                            <td>760</td>
-                            <td>20.43%</td>
-                        </tr>
-                        <tr>
-                            <td>&#xe510;United Kingdom</td>
-                            <td>690</td>
-                            <td>10.35%</td>
-                        </tr>
-                        <tr>
-                            <td>&#x1f1f7;Romania</td>
-                            <td>600</td>
-                            <td>7.87%</td>
-                        </tr>
-                        <tr>
-                            <td>&#x1f1e7;Brazil</td>
-                            <td>550</td>
-                            <td>5.94%</td>
-                        </tr>
-                    </table>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1735145814944!5m2!1sen!2s"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <div class="table-wrapper">
+                        <table>
+                            <tr>
+                                <td class="td-padding"><img src="images/flags/usa.svg" alt="">&nbsp;USA</td>
+                                <td>2.920</td>
+                                <td class="td-padding">53.23%</td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding"><img src="images/flags/germany.svg" alt="">&nbsp;Germany</td>
+                                <td>1.300</td>
+                                <td class="td-padding">4.34%</td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding"><img src="images/flags/australia.svg" alt="">&nbsp;Australia</td>
+                                <td>760</td>
+                                <td class="td-padding">20.43%</td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding"><img src="images/flags/uk.svg" alt="">&nbsp;United Kingdom</td>
+                                <td>690</td>
+                                <td class="td-padding">10.35%</td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding"><img src="images/flags/romania.svg" alt="">&nbsp;Romania</td>
+                                <td>600</td>
+                                <td class="td-padding">7.87%</td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding"><img src="images/flags/brazil.svg" alt="">&nbsp;Brazil</td>
+                                <td>550</td>
+                                <td class="td-padding">5.94%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="iframe-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1735145814944!5m2!1sen!2s"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </section>
             <section class="stats">
@@ -191,7 +197,12 @@
                     </div>
                     <hr>
                     <div class="bottom-text">
-                        <img src="images/triangle.svg" alt=""> Get more space
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px"
+                            fill="#434343">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+                        </svg>
+                        <span>Get more space</span>
                     </div>
                 </div>
                 <div class="box">
@@ -206,7 +217,13 @@
                     </div>
                     <hr>
                     <div class="bottom-text">
-                        <img src="images/tag.svg" alt=""> Tracked from Google Analytics
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px"
+                            fill="#434343">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+                        </svg>
+                        <span>Tracked from Google Analytics</span>
                     </div>
                 </div>
                 <div class="box">
@@ -221,8 +238,13 @@
                     </div>
                     <hr>
                     <div class="bottom-text">
-                        <img src="images/24hours.svg" alt="">
-                        <p>Last 24 hours</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px"
+                            fill="#434343">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+                        </svg>
+                        <span>Last 24 hours</span>
                     </div>
                 </div>
                 <div class="box">
@@ -237,8 +259,21 @@
                     </div>
                     <hr>
                     <div class="bottom-text">
-                        <img src="images/update.svg" alt="">
-                        <p>Just updated</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px"
+                            viewBox="0 0 24 24" width="20px" fill="#434343">
+                            <g>
+                                <rect fill="none" height="24" width="24" x="0" />
+                            </g>
+                            <g>
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M21,10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-0.1c-2.73,2.71-2.73,7.08,0,9.79s7.15,2.71,9.88,0 C18.32,15.65,19,14.08,19,12.1h2c0,1.98-0.88,4.55-2.64,6.29c-3.51,3.48-9.21,3.48-12.72,0c-3.5-3.47-3.53-9.11-0.02-12.58 s9.14-3.47,12.65,0L21,3V10.12z M12.5,8v4.25l3.5,2.08l-0.72,1.21L11,13V8H12.5z" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <span>Just updated</span>
                     </div>
                 </div>
             </section>
@@ -246,7 +281,7 @@
             <section class="cards">
                 <div class="card">
                     <div class="card-top">
-                        <img class="card-img" src="images/card-1.jpeg" alt="">
+                        <div><img class="card-img" src="images/card-1.jpeg" alt=""></div>
                         <div class="btns">
                             <span title="View" class="material-icons gray cursor">art_track</span>
                             <span title="Edit" class="material-icons green cursor">edit</span>
@@ -268,7 +303,7 @@
                 </div>
                 <div class="card">
                     <div class="card-top">
-                        <img class="card-img" src="images/card-2.jpeg" alt="">
+                        <div><img class="card-img" src="images/card-2.jpeg" alt=""></div>
                         <div class="btns">
                             <span title="View" class="material-icons gray cursor">art_track</span>
                             <span title="Edit" class="material-icons green cursor">edit</span>
@@ -278,7 +313,7 @@
                     <h3>Office Studio</h3>
                     <div class="card-mid">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti omnis voluptates nam
-                            exercitationem similique neque dignissimos sint.</p>
+                            exercitationem .</p>
                     </div>
                     <div class="card-bottom">
                         <hr>
@@ -290,7 +325,7 @@
                 </div>
                 <div class="card">
                     <div class="card-top">
-                        <img class="card-img" src="images/card-3.jpeg" alt="">
+                        <div><img class="card-img" src="images/card-3.jpeg" alt=""></div>
                         <div class="btns">
                             <span title="View" class="material-icons gray cursor">art_track</span>
                             <span title="Edit" class="material-icons green cursor">edit</span>
@@ -315,7 +350,7 @@
             <footer>
                 <div class="footer-left cursor">Home Company Portfolio Blog</div>
                 <div class="footer-right">
-                    &#xA9; John Doe, 2023
+                    &#xA9; <i>John Doe,</i> 2023
                 </div>
             </footer>
     </main>

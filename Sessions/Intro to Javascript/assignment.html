@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        ul li {
+            cursor: pointer;
+            padding: 5px 30px;
+            font-size: 16pt;
+            background-color: antiquewhite;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="ul">Home</li>
+        <li class="ul">Services</li>
+        <li class="ul">About</li>
+        <li class="ul">Contact</li>
+    </ul>
+    <h1 id="title">Home</h1>
+
+    <script>
+        const title = document.querySelector('#title');
+        const ul = document.querySelector('.ul');
+        
+        let thetitle = Home;
+        ul.textContent = thetitle;
+
+        ul.addEventListener('click', function(){
+            ul.textContent = thetitle;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h2 id="msg"></h2>
+    <script>
+        const msg = document.querySelector('#msg')
+       
+        // step 1
+        let pcNum = Math.floor(Math.random()*10 ) + 1;
+        console.log(pcNum);
+
+        // step 2
+        let userNum = prompt("Guess a number 1 - 10: ");
+
+        // step 3
+        if(userNum < pcNum){
+            userNum = prompt("Guess Higher: ");
+        }
+
+        // step 4
+        if(userNum > pcNum){
+           userNum = prompt("Guess Lower: ");
+        }
+
+        // step 5
+        if(userNum == pcNum){
+            console.log("CONGRATULATIONS!");
+            msg.textContent = "CONGRATULATIONS!";
+        }
+
+        //step 6
+        if(userNum != pcNum){
+            console.log("YOU LOSE!");
+            msg.textContent = "YOU LOSE!";
+        }
+    </script>
+</body>
+</html>
