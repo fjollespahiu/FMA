@@ -25,23 +25,19 @@
 
 <body>
     <ul>
-        <li class="ul">Home</li>
-        <li class="ul">Services</li>
-        <li class="ul">About</li>
-        <li class="ul">Contact</li>
+        <li onclick="changetitle('Home')">Home</li>
+        <li onclick="changetitle('Services')">Services</li>
+        <li onclick="changetitle('About')">About</li>
+        <li onclick="changetitle('Contact')">Contact</li>
     </ul>
     <h1 id="title">Home</h1>
 
     <script>
         const title = document.querySelector('#title');
-        const ul = document.querySelector('.ul');
         
-        let thetitle = Home;
-        ul.textContent = thetitle;
-
-        ul.addEventListener('click', function(){
-            ul.textContent = thetitle;
-        });
+        function changetitle(li){
+            title.textContent = li;
+        }
     </script>
 </body>
 
