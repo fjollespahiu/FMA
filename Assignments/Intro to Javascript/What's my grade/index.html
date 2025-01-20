@@ -7,6 +7,29 @@
 </head>
 <body>
     <script>
+        UserPoints = prompt('Insert your points 0-100');
+
+        if (UserPoints > 0 & UserPoints < 20) {
+            console.log('Unfortunately, you got a 1.')
+        }
+        else if(UserPoints >= 20 & UserPoints <= 39) {
+            console.log('You got a 2, work harder!')
+        }
+        else if(UserPoints >= 40 & UserPoints <=59){
+            console.log('Keep it up, you got a 3')
+        }
+        else if(UserPoints >= 60 & UserPoints <=79 ){
+            console.log('Well done, you got a 4!')
+        }
+        else if(UserPoints >= 80 & UserPoints <= 100){
+            console.log('Excellent! You got a 5')
+        }
+        else if(UserPoints != Number){
+            console.log('There was an error in your input')
+        }
+        else if(UserPoints < 0 && UserPoints > 100){
+            console.log('There was an error in your input')
+        }
     </script>
 </body>
 </html>
