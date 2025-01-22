@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+</head>
+<body>
+    <h1 id="txt"></h1>
+    <script>
+        const year = parseInt(prompt('Write down your birth year'));
+        const msg = document.querySelector('#txt')
+
+        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)){
+            txt.innerHTML= "This year is a Leap Year";
+        }
+        else {
+            txt.innerHTML = "This year is not a Leap Year";
+            txt.style.color = "red";
+        };
+    </script>
+</body>
+</html>
