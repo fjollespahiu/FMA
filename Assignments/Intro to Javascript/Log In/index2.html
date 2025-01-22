@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+
+<body>
+    <h1 id="msg"></h1>
+    <script>
+        const username = prompt('Enter your username');
+        const password = prompt('Enter your password');
+        const msg = document.querySelector('#msg');
+
+        let data = { username: "admin", password: "12341234" };
+
+        if (username !== data.username || password !== data.password) {
+            console.log("Wrong Credentials");
+            msg.innerHTML = "Wrong Credentials";
+            msg.style.color = "red";
+        }
+        else {
+            console.log("Welcome");
+            msg.innerHTML = "Welcome";
+            msg.style.color = "green";
+        };
+    </script>
+</body>
+
+</html>
