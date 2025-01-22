@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of three numbers</title>
+</head>
+<style>
+    input {
+        background-color: rgb(218, 218, 218);
+        color: blue;
+        padding: 5px;
+        border: 1px blue solid;
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        padding: 10px;
+        border: 1px rgb(0, 0, 75) solid;
+        border-radius: 5px;
+        background-color: gray;
+        color: rgb(0, 0, 75);
+    }
+    button:hover {background-color: rgb(0, 0, 75); color: white;}
+</style>
+<body>
+    <form>
+        <label for="a">First number:</label>
+        <input type="number" id="a"></input>
+        <br>
+        <label for="b">Second number:</label>
+        <input type="number" id="b"></input>
+        <br>
+        <label for="c">Third number:</label>
+        <input type="number" id="c"></input>
+    </form>
+    <br>
+    <button onclick="checkNumber()">Check</button>
+
+    <script>
+        const a = document.querySelector('#a');
+        const b = document.querySelector('#b');
+        const c = document.querySelector('#c');
+
+        function checkNumber() {
+            const numA = parseInt(a.value);
+            const numB = parseInt(b.value);
+            const numC = parseInt(c.value);
+
+            if (numA > numB && numA > numC){
+                console.log(`The largest number is ${a.value}`)
+            }
+            else if ( numA < numB && numB > numC){
+                console.log(`The largest number is ${b.value}`)
+            }
+            else {
+                console.log(`The largest number is ${c.value}`)
+            }
+        };
+    </script>
+</body>
+
+</html>
