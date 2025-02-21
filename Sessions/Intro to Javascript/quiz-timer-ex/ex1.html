@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide or Show window</title>
+    <style>
+        button {
+            background-color: blue;
+            padding: 10px 20px;
+            color: white;
+            border: blue;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+        .inst {
+            width: 500px;
+            background-color: antiquewhite;
+            border: 10px;
+            padding: 20px;
+            visibility: hidden;
+        }
+        .inst-active {visibility: visible;}
+    </style>
+</head>
+
+<body>
+    <button id="startBTN">Start Quiz</button>
+
+    <div id="instructions" class="inst">
+        <h2>Welcome to my box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi cum quibusdam inventore illo ducimus quia
+            sint, non id culpa ad, laudantium, repudiandae illum ipsam modi aspernatur in eligendi rerum error.</p>
+        <button id="nextBTN">Next</button>
+    </div>
+    <script>
+        const startBTN = document.querySelector('#startBTN');
+        const instructions = document.querySelector('#instructions');
+        const nextBTN = document.querySelector('#nextBTN');
+
+        startBTN.addEventListener('click', ()=> {
+            instructions.classList.add('inst-active'); 
+        });
+
+        nextBTN.addEventListener('click', ()=>{
+            instructions.classList.remove('inst-active');
+        });
+
+    </script>
+</body>
+
+</html>

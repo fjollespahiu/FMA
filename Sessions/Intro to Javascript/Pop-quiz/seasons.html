@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="logo">
+        LOGO
+    </div>
+    <nav>
+        <ul id="seasons">
+            <li onclick="loadSeason(0)">Spring</li>
+            <li onclick="loadSeason(1)">Summer</li>
+            <li onclick="loadSeason(2)">Autumn</li>
+            <li onclick="loadSeason(3)">Winter</li>
+        </ul>
+    </nav>
+    <main>
+        <h2 id="title"></h2>
+        <div id="photo">
+        </div>
+    </main>
+
+    <script>
+        let data = [
+            {
+                title: "Spring",
+                hero: "spring.png"
+            },
+            {
+                title: "Summer",
+                hero: "summer.png"
+            },
+            {
+                title: "Autumn",
+                hero: "autumn.png"
+            },
+            {
+                title: "Winter",
+                hero: "winter.png"
+            }
+        ]
+
+        const seasons = document.querySelector('#seasons');
+        const photo = document.querySelector('#photo');
+
+        loadSeason(0);
+        function loadSeason(s) {
+            title.innerHTML = data[s].title;
+            photo.innerHTML = `
+            <img src="img/${data[s].hero}"</img>
+            `;   
+        };
+    </script>
+</body>
+
+</html>

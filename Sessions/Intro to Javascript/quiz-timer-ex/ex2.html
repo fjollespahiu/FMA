@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Questions</title>
+    <style>
+        button {
+            background-color: blue;
+            padding: 10px 20px;
+            color: white;
+            border: blue;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        .question {
+            width: 500px;
+            background-color: antiquewhite;
+            border: 10px;
+            padding: 20px;
+        }
+
+        .question ol li {
+            padding: 10px;
+            background-color: rgb(225, 204, 177);
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .question ol li:hover {
+            background-color: rgb(176, 162, 143);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="loadQbtn">Next Question</button>
+
+    <div id="question" class="question">
+        <h2 id="theQuestion"></h2>
+        <ol type="a" id="options">
+        </ol>
+    </div>
+    <script>
+        let allQuestions = [
+            {
+                q: "What does HTML stand for?",
+                o: [
+                    'HyperText Making Language',
+                    'Hightext Markup Language',
+                    'HyperText Markup Language',
+                    'None of the above'
+                ]
+            },
+            {
+                q: "What does CSS stand for?",
+                o: [
+                    'Cascading Style Sheet',
+                    'Cascade Sheet Style',
+                    'Castind Style Sheet',
+                    'All of the above'
+                ]
+            },
+            {
+                q: "What does the rain fall?",
+                o: [
+                    'It doesnt have stairs to go down',
+                    'Its too heavy',
+                    'Because it wants to',
+                    'I have no idea'
+                ]
+            }
+
+        ]
+
+        const loadQbtn = document.querySelector('#loadQbtn');
+        const theQuestion = document.querySelector('#theQuestion');
+        const options = document.querySelector('#options');
+        let currentQuestion = 0;
+
+
+        loadQbtn.addEventListener('click', loadTheQuestion)
+
+        function loadTheQuestion(){
+            theQuestion.textContent = allQuestions[0].q;
+            options.innerHTML = ' ';
+
+            for (let i = 0; i <allQuestions[0].o.length; i++){
+              options.innerHTML += '<li>' + allQuestions[currentQuestion].o[i] + '</li>';  
+            }
+
+            if(currentQuestion < (allQuestions.length-1)){ currentQuestion++ }
+        }
+    </script>
+</body>
+
+</html>
