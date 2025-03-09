@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Load Questions</title>
+    <title>Load Question</title>
     <style>
         button {
             background-color: blue;
@@ -13,7 +13,6 @@
             border: blue;
             border-radius: 10px;
             cursor: pointer;
-
         }
 
         .question {
@@ -42,60 +41,28 @@
 
     <div id="question" class="question">
         <h2 id="theQuestion"></h2>
-        <ol type="a" id="options">
-        </ol>
+        <ol type="a" id="options"></ol>
     </div>
+
+    <script src="questions.js"></script>
     <script>
-        let allQuestions = [
-            {
-                q: "What does HTML stand for?",
-                o: [
-                    'HyperText Making Language',
-                    'Hightext Markup Language',
-                    'HyperText Markup Language',
-                    'None of the above'
-                ]
-            },
-            {
-                q: "What does CSS stand for?",
-                o: [
-                    'Cascading Style Sheet',
-                    'Cascade Sheet Style',
-                    'Castind Style Sheet',
-                    'All of the above'
-                ]
-            },
-            {
-                q: "What does the rain fall?",
-                o: [
-                    'It doesnt have stairs to go down',
-                    'Its too heavy',
-                    'Because it wants to',
-                    'I have no idea'
-                ]
-            }
-
-        ]
-
         const loadQbtn = document.querySelector('#loadQbtn');
         const theQuestion = document.querySelector('#theQuestion');
         const options = document.querySelector('#options');
         let currentQuestion = 0;
 
+        loadTheQuestion(); // load 1 question
+        loadQbtn.addEventListener('click', loadTheQuestion);
 
-        loadQbtn.addEventListener('click', loadTheQuestion)
-
-        function loadTheQuestion(){
-            theQuestion.textContent = allQuestions[0].q;
-            options.innerHTML = ' ';
-
-            for (let i = 0; i <allQuestions[0].o.length; i++){
-              options.innerHTML += '<li>' + allQuestions[currentQuestion].o[i] + '</li>';  
+        function loadTheQuestion() {
+            theQuestion.textContent = allQuestions[currentQuestion].q;
+            options.innerHTML = '';
+            for (let i = 0; i < allQuestions[currentQuestion].o.length; i++) {
+                options.innerHTML += '<li>' + allQuestions[currentQuestion].o[i] + '</li>';
             }
-
-            if(currentQuestion < (allQuestions.length-1)){ currentQuestion++ }
-        }
+            if (currentQuestion < (allQuestions.length-1)) { currentQuestion++; }
+            else {loadQbtn.style.display = "none"}
+        } 
     </script>
 </body>
-
 </html>

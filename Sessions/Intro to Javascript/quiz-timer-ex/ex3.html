@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights on and off</title>
+    <style>
+        .onoffBTN {
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            width: 600px;
+            padding: 20px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+        }
+
+        .learn {
+            padding: 10px;
+            background-color: white;
+        }
+
+        .active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    Lights: <button class="onoffBTN">OFF</button>
+    <div class="box">
+        <h1>Welcome to my world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam consectetur assumenda minima sequi itaque!
+            Voluptatibus in cumque repellat voluptatem, dolorem at id esse incidunt praesentium sed adipisci blanditiis
+            exercitationem sint.</p>
+        <button class="learn">Learn More</button>
+    </div>
+    <script>
+        const onoffBTN = document.querySelector('.onoffBTN');
+        const box = document.querySelector('.box');
+        let status = false;
+
+        onoffBTN.addEventListener('click', () => {
+            if (status == false) {
+                box.classList.add('active');
+                onoffBTN.textContent = 'ON';
+                onoffBTN.classList.add('active')
+                status = true;
+            }
+            else {
+                box.classList.remove('active');
+                onoffBTN.textContent = 'OFF';
+                onoffBTN.classList.remove('active')
+                status = false;
+            }
+        });
+    </script>
+</body>
+
+</html>
