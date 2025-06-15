@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:  20px;
+    }
+    .active {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .wrapper {
+        background-color: gray;
+        width: 300px;
+        height: 250px;
+    }
+</style>
+
+<body>
+    <button id="button">Toggle Movie Details</button>
+    <div class="wrapper">
+        <h1>Movie Title</h1>
+        <p>Description</p><br>
+        <p><b>Year:</b>2025</p>
+    </div>
+
+    <script>
+        let movies = [
+            {
+                title: 'The Ballad of Songbirds and Snakes',
+                desc: 'Coriolanus Snow mentors and develops feelings for the female District 12 tribute during the 10th Hunger Games.',
+                year: '2023'
+            }
+        ]
+
+        const button = document.querySelector('#button');
+        const wrapper = document.querySelector('.wrapper');
+        let light = false;
+
+        button.addEventListener('click', () => {
+            if (light === false) {
+                wrapper.classList.add('active');
+                wrapper.innerHTML = `
+                <h1>${movies[0].title}</h1>
+                <p>${movies[0].desc}</p>
+                <p><b>Year:</b>${movies[0].year}</p>
+                `;
+                light = true;
+            }
+            else {
+                wrapper.classList.remove('active');
+                wrapper.innerHTML =`
+                    <h1>Movie Title</h1>
+                    <p>Description</p><br>
+                    <p><b>Year:</b>2025</p>`
+                light = false;
+            }
+        })
+    </script>
+
+</body>
+
+</html>

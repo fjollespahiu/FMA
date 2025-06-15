@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+</head>
+
+<body>
+    <h2>Simple Quiz</h2>
+    <div id="quiz">
+        <div>
+            <p>What is the capital of France?</p>
+            <label>
+                <input type="radio" name="q0" value="0"> London
+            </label><br>
+
+            <label>
+                <input type="radio" name="q0" value="1"> Berlin
+            </label><br>
+
+            <label>
+                <input type="radio" name="q0" value="2"> Paris
+            </label><br>
+
+            <label>
+                <input type="radio" name="q0" value="3"> Madrid
+            </label><br>
+        </div>
+    </div>
+
+    <p id="result">You scored 2 out of 3</p>
+    <button id="submit">Submit Quiz</button>
+
+    <script>
+        // 1. Define the feed
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["London", "Berlin", "Paris", "Madrid"],
+                answer: 2  // index of "Paris"
+            },
+            {
+                question: "What color is the sky?",
+                options: ["Green", "Blue", "Red", "Yellow"],
+                answer: 1  // index of "Blue"
+            },
+            {
+                question: "How many legs does a spider have?",
+                options: ["4", "6", "8", "10"],
+                answer: 2  // index of "8"
+            }
+        ];
+
+        // 2. Build the Quiz HTML
+        const quizDiv = document.querySelector('#quiz');
+        quizDiv.innerHTML = '';
+
+        questions.forEach((q, i) => {
+            const qDiv = document.createElement('div');
+            qDiv.innerHTML = `<p>${q.question}</p>`
+
+            q.options.forEach((opt, j) => {
+                const optionHTML = `
+                <label>
+                    <input type="radio" name="q${i}" value="${j}">${opt}
+                </label><br>
+                `
+                qDiv.innerHTML += optionHTML;
+            })
+
+            quizDiv.appendChild(qDiv);
+
+        });
+        // 3. Calculate score on Submit
+        const submitBTN = document.querySelector('#submit');
+
+        result.textContent = '';    
+        submitBTN.addEventListener('click', () => {
+            let score = 0;
+
+            questions.forEach((q, i) => {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`)
+
+                if (selected && parseInt(selected.value) === q.answer) {
+                    score++;
+                }
+            });
+
+            const result = document.querySelector('#result');
+            result.textContent = `You scored ${score} out of ${questions.length}`
+        })
+
+
+    </script>
+</body>
+
+</html>

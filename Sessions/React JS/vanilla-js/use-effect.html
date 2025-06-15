@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1 id="counter">Counter:0</h1>
+
+    <script>
+        const counter = document.querySelector('#counter')
+        let count = 0;
+
+        let heartbeat = setInterval(()=>{
+            if(count !=10) count++; else{clearInterval(heartbeat)}
+            counter.textContent = 'Counter: ' + count
+        }
+        ,1000)
+
+    </script>
+</body>
+</html>

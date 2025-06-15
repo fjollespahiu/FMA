@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Page Styles */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        transition: background 0.5s ease;
+    }
+
+    /* Center Content */
+    .container {
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .activeContainer {
+        background-color: bisque;
+    }
+
+    /* Button Styling */
+    .button {
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        background-color: #3498db;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Hover Effect */
+    .button:hover {
+        transform: scale(1.1);
+    }
+
+    /* Click Effect */
+    .button:active {
+        transform: scale(0.95);
+    }
+
+    /* Toggle Button Active State */
+    .button.active {
+        background-color: #2ecc71;
+        /* Green */
+    }
+
+   
+</style>
+
+<body>
+
+    <div class="container">
+        <button id="togglebtn" class="button">Click Me</button>
+    </div>
+
+
+    <script>
+        const container = document.querySelector('.container');
+        const togglebtn = document.querySelector('#togglebtn');
+        let status = false;
+
+        togglebtn.addEventListener('click', () => {
+            if (status == false) {
+                container.classList.add('activeContainer');
+                togglebtn.classList.add('active');
+                togglebtn.textContent = 'Toggled';
+                status = true;
+            }
+            else{
+                container.classList.remove('activeContainer');
+                togglebtn.classList.remove('active');
+                togglebtn.textContent = 'Click Me';
+                status = false;
+            }
+        }
+        )
+
+
+    </script>
+</body>
+
+</html>

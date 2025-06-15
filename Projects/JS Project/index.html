@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1>📚 My Bookstore</h1>
+        <button id="cartBtn">
+            <span class="material-symbols-outlined">shopping_cart</span> Cart (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <aside class="cartSidebar" id="cartSidebar">
+        <div class="cartdiv">
+            <h2>Your Cart</h2>
+            <button class="closeBtn" id="closeCart">X</button>
+        </div>
+
+        <ul id="cartItems"></ul>
+        <button class="checkoutBtn" id="checkoutBtn">Checkout</button>
+        <p><strong>Total:</strong> $<span id="cartTotal">0.00</span></p>
+    </aside>
+
+    <main class="book-list" id="bookList">
+    </main>
+
+    <div class="orderDetails" id="orderDetails">
+        <form action="">
+            <label for="firstName">First Name</label>
+            <input type="text" name="" id="firstName" required placeholder="First Name"></input>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="" id="lastName" required placeholder="Last Name"></input>
+
+            <label for="phone">Phone Number</label>
+            <input type="number" name="" id="phone" required placeholder="Phone Number"></input>
+
+            <label for="address">Address</label>
+            <input type="text" name="" id="adress" required placeholder="Address"></input>
+
+            <button id="orderBTN">Place Order</button>
+        </form>
+    </div>
+
+    <div class='placeOrder' id="placeOrder">
+        <p>Your order has been placed successfully!</p>
+        <button class="homeBtn" id="homeBtn">Go back to Home page</button>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="footerContent">
+            <p>&copy; Fjollë Spahiu. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create from CRUD</title>
+</head>
+
+<body>
+    <table width="50%" border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Payment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="liststudents">
+            <tr>
+                <td>Ardit</td>
+                <td>Krasniqi</td>
+                <td>ardit@krasniqi.com</td>
+                <td>€0</td>
+            </tr>
+        </tbody>
+    </table>
+    <form action="#">
+        <table>
+            <tr>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" id="firstName"></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">Last Name:</label></td>
+                <td><input type="text" id="lastName"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="payment">Payment:</label></td>
+                <td><input type="number" id="payment"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="saveBTN">Save</button></td>
+            </tr>
+        </table>
+    </form>
+    <script src="data.js"></script>
+    <script>
+        const liststudents = document.querySelector('#liststudents');
+        const saveBTN = document.querySelector('#saveBTN');
+        const firstName = document.querySelector('#firstName');
+        const lastName = document.querySelector('#lastName');
+        const email = document.querySelector('#email');
+        const payment = document.querySelector('#payment');
+        const editBTN = document.querySelector('#editBTN');
+
+        loadList();
+        function loadList() {
+            liststudents.innerHTML = '';
+            for (let i = 0; i < students.length; i++) {
+                liststudents.innerHTML += `
+                    <tr>
+                        <td>${students[i].first_name}</td>
+                        <td>${students[i].last_name}</td>
+                        <td>${students[i].email}</td>
+                        <td>€${students[i].payment}</td>
+                        <td>
+                            <button id="editBTN">Edit</button>
+                            <button id="deleteBTN">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            }
+        };
+
+        saveBTN.addEventListener('click', () => {
+            let newRecord = {
+                first_name: firstName.value,
+                last_name: lastName.value,
+                email: email.value,
+                payment: payment.value
+            };
+
+            students.push(newRecord);
+            loadList();
+        })
+
+    </script>
+</body>
+
+</html>

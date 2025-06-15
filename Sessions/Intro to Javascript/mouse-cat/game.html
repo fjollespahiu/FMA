@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
         }
     </style>
 </head>
+
 <body>
     <canvas width="500" height="500" id="terrain"></canvas>
     <script>
@@ -17,34 +19,60 @@
         let ctx = terrain.getContext('2d');
 
         let cat = new Image();
-            cat.src = "cat.png";
+        cat.src = "cat.png";
 
         let catObj = { x: 200, y: 200 }
 
-        cat.onload = function (){
-           ctx.drawImage(cat, catObj.x, catObj.y);
-        }
+        let mouse = new Image();
+        mouse.src = "mouse.png"
 
-        addEventListener('keydown', (e)=>{
+        let mouseObj = { x: 100, y: 150 }
+
+        function draw (){
             ctx.clearRect(0, 0, 500, 500);
-            
-            if (e.key == "ArrowRight"){
-                catObj.x +=5;
+            ctx.drawImage(cat, catObj.x, catObj.y);
+            ctx.drawImage(mouse, mouseObj.x, mouseObj.y);
+        }
+        cat.onload = draw ();
+        mouse.onload = draw ();
+
+        addEventListener('keydown', (e) => {
+            ctx.clearRect(0, 0, 500, 500);
+
+            if (e.key == "ArrowRight") {
+                catObj.x += 5;
                 ctx.drawImage(cat, catObj.x, catObj.y);
             }
-            if (e.key == "ArrowLeft"){
-                catObj.x -=5;
+            if (e.key == "ArrowLeft") {
+                catObj.x -= 5;
                 ctx.drawImage(cat, catObj.x, catObj.y);
             }
-            if (e.key == "ArrowUp"){
-                catObj.y -=5;
+            if (e.key == "ArrowUp") {
+                catObj.y -= 5;
                 ctx.drawImage(cat, catObj.x, catObj.y);
+            }
+            if (e.key == "ArrowDown") {
+                catObj.y += 5;
+                ctx.drawImage(cat, catObj.x, catObj.y);
+            }
+
+            if (e.key == "ArrowRight") {
+                mouseObj.x += 3;
+            }
+            if (e.key == "ArrowLeft") {
+                mouseObj.x -= 3
+            }
+            if (e.key == "ArrowUp") {
+                mouseObj.y -= 3
             }
             if (e.key == "ArrowDown"){
-                catObj.y +=5;
-                ctx.drawImage(cat, catObj.x, catObj.y);
+                mouseObj.y +=3
             }
+
+            draw ();
         });
+
     </script>
 </body>
+
 </html>

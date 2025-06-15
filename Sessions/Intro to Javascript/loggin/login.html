@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input id="username" type="text" placeholder="Username" required>
+            <input id="password" type="password" placeholder="Password" required>
+            <p id="message"></p>
+        </form>
+        <button id="loginBTN" type="submit">Login</button>
+    </div>
+    <script>
+        const username = document.querySelector('#username');
+        const password = document.querySelector('#password');
+        const loginBTN = document.querySelector('#loginBTN');
+        const message  = document.querySelector('#message'); 
+
+        let data = {username: "fjolla", password: "5555"}
+
+        loginBTN.addEventListener('click', ()=>{
+            if(username.value == data.username && password.value == data.password){
+                window.location = ('https://a.futureminds.io/lms/')            }
+            else  if (username.value == '' || password.value == ''){
+                message.textContent = 'Wrong Credentials';
+                message.style.color = "red";
+                username.focus();
+                password.focus();
+            }
+            else {
+                message.textContent = 'Wrong Credentials';
+                message.style.color = "red";
+                username.focus();
+                password.focus();
+            }
+        }
+    )
+    password.addEventListener('keypress', (event) => {
+            if (event.key === "Enter") {
+                loginBTN.click();
+            }
+        });
+
+        username.addEventListener('keypress', (event) => {
+            if (event.key === "Enter") {
+                loginBTN.click(); 
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+<body>
+    <button id="clickBTN">Click</button>
+    <p id="text">This is a Toggled Text.</p>
+
+    <script>
+        const text = document.querySelector('#text');
+        const clickBTN = document.querySelector('#clickBTN');
+
+        let status = false;
+
+        clickBTN.addEventListener('click', function(){
+            if(!status)
+            {
+                text.style.visibility = "hidden"
+                status = true;
+            }
+            else{
+                status = false;
+                text.style.visibility = "visible"
+            }
+        })
+
+    </script>
+</body>
+</html>

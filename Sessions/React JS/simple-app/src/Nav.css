@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {list-style-type: none; display: flex; gap: 10px;}
+
+nav li {
+    padding: 5px 10px;
+    background-color: aqua;
+}
+
+nav li:hover { background-color: rgb(46, 136, 136);}

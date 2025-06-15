@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="showValue(this)">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+    <p id="selected"></p>
+
+    <script>
+        const selected = document.querySelector('#selected');
+
+        function showValue(selct){
+            selected.textContent = select.value;
+        }
+    </script>
+</body>
+</html>
